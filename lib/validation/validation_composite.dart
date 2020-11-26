@@ -9,6 +9,11 @@ class ValidationComposite implements Validation {
   ValidationComposite(this.validations);
 
   String validate({@required String field, @required String value}) {
-    return null;
+    String error;
+    for (final validation in validations) {
+      error = validation.validate(value);
+      if (error?.isNotEmpty == true) return error;
+    }
+    return error;
   }
 }
