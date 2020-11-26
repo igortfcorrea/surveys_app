@@ -1,6 +1,5 @@
 import 'package:faker/faker.dart';
 import 'package:mockito/mockito.dart';
-import 'package:surveys_app/domain/helpers/domain_error.dart';
 import 'package:test/test.dart';
 
 import 'package:surveys_app/presentation/protocols/protocols.dart';
@@ -8,6 +7,7 @@ import 'package:surveys_app/presentation/presenters/presenters.dart';
 
 import 'package:surveys_app/domain/entities/account_entity.dart';
 import 'package:surveys_app/domain/usecases/usecases.dart';
+import 'package:surveys_app/domain/helpers/helpers.dart';
 
 class ValidationSpy extends Mock implements Validation {}
 
