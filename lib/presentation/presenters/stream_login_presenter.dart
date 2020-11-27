@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:meta/meta.dart';
+import 'package:surveys_app/ui/pages/login/login_presenter.dart';
 
 import '../../domain/usecases/usecases.dart';
 import '../../domain/helpers/helpers.dart';
@@ -20,7 +21,7 @@ class LoginState {
   bool isLoading = false;
 }
 
-class StreamLoginPresenter {
+class StreamLoginPresenter implements LoginPresenter {
   final Validation validation;
   final Authentication authentication;
   var _controller = StreamController<LoginState>.broadcast();
